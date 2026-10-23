@@ -89,3 +89,37 @@ The GitHub Actions workflow runs tests and builds the application before deployi
 ## Scope
 
 Initial release: Lorenz differential equations and butterfly-effect comparison. Potential future modules: double pendulum, logistic-map bifurcation diagrams, Lyapunov-exponent estimation and 3D WebGL scenes.
+
+## Additional interactive modules
+
+### Double pendulum
+
+Two point masses attached to massless rods provide a classic nonlinear mechanical system. For rod lengths $l_1,l_2$, masses $m_1,m_2$, and angles $\theta_1,\theta_2$, the kinetic and gravitational potential energies can be written as
+
+$$
+T=\tfrac12(m_1+m_2)l_1^2\dot\theta_1^2+\tfrac12m_2l_2^2\dot\theta_2^2 +m_2l_1l_2\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2),
+$$
+
+$$
+V=-(m_1+m_2)gl_1\cos\theta_1-m_2gl_2\cos\theta_2.
+$$
+
+The Euler–Lagrange equations derived from $L=T-V$ determine the coupled angular accelerations. The simulator integrates them with RK4, compares two slightly different initial angles, and displays mechanical energy as a numerical accuracy diagnostic. It assumes ideal, frictionless joints; long-term trajectory accuracy is limited by both chaotic sensitivity and finite time steps.
+
+### Logistic map and bifurcation
+
+The logistic map is a minimal example of how repeated deterministic updates can produce period doubling and chaos:
+
+$$
+x_{n+1}=r x_n(1-x_n), \qquad 0\leq x_n\leq1,\quad 0\leq r\leq4.
+$$
+
+The bifurcation visualization sweeps $r$ from $2.5$ to $4$, discards a transient and plots subsequent iterations. A finite-time Lyapunov exponent estimates average sensitivity:
+
+$$
+\lambda\approx\frac1N\sum_{k=1}^{N}\log\left|r(1-2x_k)\right|.
+$$
+
+Explore how a stable point changes into cycles and then chaotic regimes, and how periodic windows can reappear inside chaos. Positive finite-time values suggest sensitive dependence, but estimates depend on numerical and sampling choices.
+
+**New experiments:** Compare two nearby double-pendulum starts, inspect approximate energy conservation, vary the logistic growth parameter, and identify periodic windows within the bifurcation diagram.
