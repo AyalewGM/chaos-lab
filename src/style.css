@@ -3,3 +3,17 @@
 
 /* Cinematic Chaos visual identity */
 :root{color-scheme:dark}body{background:#05070c;color:#f4f3f4;background-image:radial-gradient(ellipse at 50% 0%,#3b232837,transparent 62%)}header{background:#0a0c12;border-color:#473837}.symbol{background:#f6a36c;color:#2a120e}.brand span:last-child,.eyebrow{color:#ffaf78}.headerrow a{color:#ffb68b}.hero{padding:54px 0 38px}.hero em{color:#ffac7c}.hero p,.theory>p{color:#bdafad}.panel,.extra{background:#0e1119;border-color:#4a3b40;box-shadow:0 16px 48px #0007}.panelhead{background:#16131a;color:#e8d5d5;border-color:#4a3b40}.panelhead span{color:#ffac7c}.plot{padding:7px;background:#070a10}.plot canvas{border-radius:9px}.metrics strong{color:#ffae7a}.module-tabs button{background:#17141e;border-color:#60454d;color:#eacbc6}.module-tabs button.selected,.buttons .primary{background:#f6a36c;color:#251416;border-color:#f6a36c}.form input[type=range],.extra-inner input[type=range]{accent-color:#f6a36c}.form select,.extra-inner select{background:#17131c;border-color:#69494c}.tip{background:#1c151d;color:#c7aaa8}.cards article{background:#121119;border-color:#523b44}.cards article div{color:#ffb37f}.theory h2{color:#fff2ee}footer{color:#ac9998;border-color:#3e3036}
+
+/* Editorial reading typography and proper mathematical notation */
+body{font-family:'DM Sans',system-ui,sans-serif;line-height:1.7}
+h1,h2,h3,.brand{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:-.035em}
+.math-explanation{margin:32px 0 80px;background:#1d151b;padding:26px 30px;border-radius:16px;border:1px solid #ffc18f55}
+.math-explanation h2{font-size:clamp(23px,3vw,33px);margin:9px 0 12px}
+.math-explanation p{font-size:15px;max-width:720px;line-height:1.85}
+.math-kicker{font-size:11px;font-weight:700;letter-spacing:.13em;color:#ffc18f}
+.math-formula{overflow-x:auto;max-width:100%;margin:14px 0;color:#ffc18f;padding:12px 4px;line-height:1.5}
+.math-formula .katex-display{margin:.5em 0;overflow-x:auto;overflow-y:hidden}
+.math-formula .katex{font-size:1.13em}
+.cards .math-formula{font-size:14px;text-align:left}
+.cards .math-formula .katex-display{text-align:left}
+@media(max-width:600px){.math-explanation{padding:20px 14px}.math-formula .katex{font-size:1em}}
